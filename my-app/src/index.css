@@ -1,0 +1,51 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+  .gradient-text-animated {
+    display: inline-block;
+    background-image: linear-gradient(to right, #fff9ae, #ffc107, #ff6f00);
+    background-size: 200% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradient-flow 2s ease-in-out infinite;
+  }
+
+  @keyframes gradient-flow {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin {
+  animation: spin 30s linear infinite;
+}
+
+
+
+
+
+
