@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "name": "coffee-cafe",
+  "builds": [
+    {
+      "src": "my-app/package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "dist"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "my-app/$1"
+    }
+  ],
+  "buildCommand": "cd my-app && npm run build",
+  "outputDirectory": "my-app/dist",
+  "installCommand": "cd my-app && npm install",
+  "framework": "vite"
+}
